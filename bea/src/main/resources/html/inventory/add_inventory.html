@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BEA</title>
+    <link rel="icon" href="../../images/Logo_Icon.png" type="image/icon type">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+</head>
+
+<body>
+    <script src="../../js/main.js"></script>
+
+    <div class="header">
+        <div>
+            <img href="#default" src="../../images//Top_Logo.png" height="70" class="logo" vspace="15px">
+            <a class="contact-row" href="mailto:vitushko.l.d@mail.ru?subject=Вопрос по BEA">
+                Задать вопросы по электронной почте</a>
+        </div>
+        <div class="header-left">
+            <a href="../index.html">Главная</a>
+            <a class="active" href="inventory.html">Инвентаризация</a>
+            <a href="../detergents/detergents.html">Моющие</a>
+            <a href="../rooms/rooms.html">Помещения</a>
+        </div>
+    </div>
+    <section class="add">
+        <h2>Добавление инвентаря</h2>
+    </section>
+
+    <form class="form-wrap">
+        <input name="name" placeholder="Наименование" id="inventoryName">
+
+        <input name="id" placeholder="Код" id="inventoryId">
+
+        <div class="dropdown">
+            <select class="dropbtn" id="place">
+                <option value="Прачечная">Прачечная</option>
+                <option value="Улица">Улица</option>
+                <option value="Пищеблок">Пищеблок</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <select class="dropbtn" id="unit">
+                <option value="кг">кг</option>
+                <option value="л">л</option>
+                <option value="шт">шт</option>
+            </select>
+        </div>
+
+        <input name="count" placeholder="Количество" id="inventoryCount">
+
+        <input type="date" id="operationDate" name="trip-start" min="1970-01-01" max="2070-12-31">
+
+        <button class="button" onclick="saveInventory()">Добавить</button>
+    </form>
+
+</body>
+
+</html>

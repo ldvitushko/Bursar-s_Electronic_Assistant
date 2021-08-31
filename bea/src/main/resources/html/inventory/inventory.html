@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BEA</title>
+    <link rel="icon" href="../../images/Logo_Icon.png" type="image/icon type">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+</head>
+
+<body>
+    <script src="../../js/main.js"></script>
+
+    <div class="header">
+        <div>
+            <img href="#default" src="../../images//Top_Logo.png" height="70" class="logo" vspace="15px">
+            <a class="contact-row" href="mailto:vitushko.l.d@mail.ru?subject=Вопрос по BEA">
+                Задать вопросы по электронной почте</a>
+        </div>
+        <div class="header-left">
+            <a href="../index.html">Главная</a>
+            <a class="active" href="inventory.html">Инвентаризация</a>
+            <a href="../detergents/detergents.html">Моющие</a>
+            <a href="../rooms/rooms.html">Помещения</a>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <a href="add_inventory.html">Поставить на учет</a>
+        <a href="delete_inventory.html">Списать</a>
+        <a href="replace_inventory.html">Переместить</a>
+        <a href="../Actions.Relocate.html">История изменений</a>
+    </div>
+    <div class="form-inline">
+        <input id="nameForSearch" name="name" placeholder="Наименование">
+
+        <div class="dropdown">
+            <select class="dropbtn" id="placeFilter">
+                <option value="">Все помещения</option>
+                <option value="Прачечная">Прачечная</option>
+                <option value="Улица">Улица</option>
+                <option value="Пищеблок">Пищеблок</option>
+            </select>
+        </div>
+
+        <button class="button" onclick="doFilter(document.getElementById('nameForSearch').value, document.getElementById('placeFilter').value)">Поиск</button>
+    </div>
+
+    <table id="inventoryTable">
+        <tr>
+            <th id="name">Наименование</th>
+            <th id="id">Код</th>
+            <th id="place">Место хранения</th>
+            <th id="unit">Единица измерения</th>
+            <th id="count">Количество</th>
+        </tr>
+
+    </table>
+    <script>getInventory();</script>
+</body>
+
+</html>

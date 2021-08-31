@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BEA</title>
+    <link rel="icon" href="../../images/Logo_Icon.png" type="image/icon type">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <img href="#default" src="../../images//Top_Logo.png" height="70" class="logo" vspace="15px">
+            <a class="contact-row" href="mailto:vitushko.l.d@mail.ru?subject=Вопрос по BEA">
+                Задать вопросы по электронной почте</a>
+        </div>
+        <div class="header-left">
+            <a href="../index.html">Главная</a>
+            <a class="active" href="inventory.html">Инвентаризация</a>
+            <a href="../detergents/detergents.html">Моющие</a>
+            <a href="../rooms/rooms.html">Помещения</a>
+        </div>
+    </div>
+    <section class="add">
+        <h2>Списание инвентаря</h2>
+    </section>
+
+    <form class="form-wrap" action="/action_page.php">
+        <!-- потом другой экшн прописать -->
+        <input name="name" placeholder="Наименование">
+        <input name="id" placeholder="Код">
+        <div class="dropdown">
+            <div class="dropbtn">Помещение<div id="down-triangle"></div>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">Прачечная<div class="circle"></div></a>
+                <a href="#">Пищеблок<div class="circle"></div></a>
+                <a href="#">Улица<div class="circle"></div></a>
+                <a href="#">Все помещения<div class="circle"></div></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropbtn">Единицы измерения<div id="down-triangle"></div>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">кг<div class="circle"></div></a>
+                <a href="#">л<div class="circle"></div></a>
+                <a href="#">шт<div class="circle"></div></a>
+            </div>
+        </div>
+        <input name="count" placeholder="Количество">
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="1970-01-01" max="2070-12-31">
+        <button class="button" type="submit">Списать</button>
+    </form>
+
+</body>
+
+</html>
